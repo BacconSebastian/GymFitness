@@ -1,0 +1,39 @@
+@import "../../App.scss";
+
+.approach {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../../assets/Approach/home-wallpaper.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right right;
+
+  .background-approach {
+    padding: 10rem 2rem 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: calc(100% - 8rem);
+    height: calc(100vh - 12rem);
+    background-color: rgba(0, 0, 0, 0.65);
+  }
+
+  h2 {
+    color: $second-color;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+  }
+
+  .data-container {
+    p {
+      color: $third-color;
+      text-align: start;
+      font-size: 1.25rem;
+      font-weight: 400;
+    }
+  }
+}

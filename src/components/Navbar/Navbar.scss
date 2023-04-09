@@ -1,0 +1,153 @@
+@import '../../App.scss';
+
+.navbar {
+  .web {
+    display: none;
+    height: 60px;
+    z-index: 5;
+  }
+
+  .mobile {
+    position: fixed;
+    width: calc(100% - 4rem);
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    padding: 0 2rem;
+    background-color: $second-color;
+    z-index: 5;
+
+    .close {
+      position: absolute;
+      right: -4rem;
+      width: 2rem;
+      transition: all ease 1s;
+    }
+
+    .open {
+      position: absolute;
+      right: -4rem;
+      width: 2rem;
+      transition: all ease 1s;
+    }
+
+    .open.enable {
+      right: 2rem;
+      transition: all ease 1s;
+    }
+
+    .close.enable {
+      right: 2rem;
+      transition: all ease 1s;
+    }
+
+    .mobile-menu {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: calc(-30vw - 4rem);
+      top: 60px;
+      width: 30vw;
+      height: auto;
+      padding: 1rem 2rem 2rem 2rem;
+      border-radius: 0 0 0 10px;
+      background-color: $second-color;
+      transition: all ease 1s;
+
+      button {
+        align-self: end;
+        margin-bottom: 2rem;
+        background-color: transparent;
+        border: none;
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        li {
+          align-self: flex-end;
+          margin-top: 1rem;
+
+          a {
+            color: $first-color;
+          }
+        }
+
+        li:first-child {
+          margin: 0;
+        }
+      }
+    }
+
+    .mobile-menu.enable {
+      right: -1px;
+      transition: all ease 1s;
+    }
+  }
+}
+
+.navbar.fixed {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .navbar {
+    .mobile {
+      display: none;
+    }
+
+    .web {
+      position: fixed;
+      top: 0;
+      left: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 6rem 0 2rem;
+      background-color: $second-color;
+      width: calc(100% - 8rem);
+
+      ul {
+        display: flex;
+        color: $first-color;
+
+        li {
+          display: flex;
+          align-items: center;
+          margin-left: 2rem;
+          cursor: pointer;
+
+          a {
+            color: $first-color;
+            font-weight: 900;
+          }
+        }
+
+        li:first-child {
+          margin: 0;
+        }
+      }
+
+      .lamp {
+        cursor: pointer;
+        position: absolute;
+        right: 2rem;
+      }
+    }
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

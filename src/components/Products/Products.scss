@@ -1,0 +1,80 @@
+@import "../../App.scss";
+
+.products {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 4rem 2rem 16rem 6rem;
+  width: calc(100% - 8rem);
+  height: calc(100vh - 6rem - 60px);
+  background-color: $first-color;
+  scroll-margin-top: 60px;
+
+  .left-side {
+    width: 45%;
+
+    h2 {
+      font-size: 3rem;
+      font-weight: 900;
+      color: $third-color;
+      text-transform: uppercase;
+
+      span {
+        color: $second-color;
+        font-size: 3rem;
+      }
+    }
+
+    p {
+      color: $third-color;
+    }
+  }
+
+  .right-side {
+    width: 45%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    overflow-y: scroll;
+    padding-right: 1rem;
+
+    .card {
+      margin-bottom: 3rem;
+    }
+
+    .card:last-child {
+      margin: 0;
+    }
+
+    .p-top {
+      padding-top: 6rem;
+    }
+
+    .image {
+      background-color: $third-color;
+      width: 100%;
+      height: 300px;
+      margin-bottom: .5rem;
+    }
+
+    p {
+      color: $third-color;
+      padding: 0 .5rem;
+      margin-bottom: .5rem;
+    }
+
+    button {
+      padding: 0 .5rem;
+    }
+  }
+
+  .right-side::-webkit-scrollbar {
+    background-color: $first-color;
+  }
+
+  .right-side::-webkit-scrollbar-thumb {
+    background-color: $second-color;
+    border-radius: 10px;
+  }
+}
