@@ -2,11 +2,11 @@
 
 .about {
   display: flex;
+  flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
   padding: 4rem 2rem 2rem 6rem;
   width: calc(100% - 8rem);
-  height: calc(100vh - 6rem);
   background-color: $fourth-color;
   margin-top: -5px;
   scroll-margin-top: 60px;
@@ -15,10 +15,12 @@
     color: $first-color;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    font-size: 2.5rem;
   }
 
   .left-side {
-    width: 45%;
+    width: 100%;
+    margin-bottom: 4rem;
 
     .first-button.active {
       background-color: $first-color;
@@ -30,7 +32,7 @@
 
   .right-side {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 3rem;
 
     .plan-card {
@@ -73,7 +75,7 @@
       }
 
       button {
-        margin: 1rem 0;
+        margin: 2rem 0 1rem 0;
         width: 90%;
       }
 
@@ -95,6 +97,44 @@
           }
         }
       }
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .about {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 4rem 2rem 2rem 6rem;
+    width: calc(100% - 8rem);
+    height: calc(100vh - 6rem);
+    background-color: $fourth-color;
+    margin-top: -5px;
+    scroll-margin-top: 60px;
+  
+    h2 {
+      color: $first-color;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+  
+    .left-side {
+      width: 45%;
+  
+      .first-button.active {
+        background-color: $first-color;
+        border-color: $first-color;
+        color: $third-color;
+        cursor: default;
+      }
+    }
+  
+    .right-side {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
     }
   }
 }

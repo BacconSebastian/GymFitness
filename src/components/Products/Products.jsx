@@ -14,7 +14,7 @@ const Products = () => {
           </span>
         </h2>
         <p>
-          Preguntá por tu membresía, por el seguimiento personal,
+          Consultá por tu membresía, por el seguimiento personal,
           <br />
           por el acompañamiento nutricional o<br />
           por cualquier duda que tengas.
@@ -40,11 +40,6 @@ const Products = () => {
         </div>
         <div className="p-top">
           <div className="card">
-            <div className="image descuento"></div>
-            <p>Hasta 50% de descuento en locales adheridos.</p>
-            <button className="second-button">{"Ver info >"}</button>
-          </div>
-          <div className="card">
             <div className="image clases-online"></div>
             <p>Clases en vivo, grabadas, rutinas personalizadas y mucho más.</p>
             <button className="second-button">{"Ver info >"}</button>
@@ -52,6 +47,11 @@ const Products = () => {
           <div className="card">
             <div className="image comida-saludable"></div>
             <p>Asesoría nutricional para sacar tu mejor potencial.</p>
+            <button className="second-button">{"Ver info >"}</button>
+          </div>
+          <div className="card">
+            <div className="image descuento"></div>
+            <p>Hasta 50% de descuento en locales adheridos.</p>
             <button className="second-button">{"Ver info >"}</button>
           </div>
         </div>

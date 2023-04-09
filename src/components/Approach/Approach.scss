@@ -12,12 +12,12 @@
   background-position: right right;
 
   .background-approach {
-    padding: 10rem 2rem 2rem 6rem;
+    padding: 16rem 2rem 2rem 6rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     width: calc(100% - 8rem);
-    height: calc(100vh - 12rem);
+    height: calc(100vh - 18rem);
     background-color: rgba(0, 0, 0, 0.65);
   }
 
@@ -26,6 +26,7 @@
     font-weight: 900;
     text-transform: uppercase;
     margin-bottom: 1rem;
+    font-size: 2.5rem;
   }
 
   .data-container {
@@ -34,6 +35,23 @@
       text-align: start;
       font-size: 1.25rem;
       font-weight: 400;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .approach {
+    h2 {
+      font-size: 3rem;
+    }
+
+    .background-approach {
+      padding: 10rem 2rem 2rem 6rem;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      width: calc(100% - 8rem);
+      height: calc(100vh - 12rem);
     }
   }
 }
