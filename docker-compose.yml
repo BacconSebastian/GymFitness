@@ -1,0 +1,26 @@
+version: "3.3"
+services:
+  reactapp:
+    container_name: client-intranet
+    build: ./client
+    expose:
+      - 3000
+    volumes:
+      - ./client:/usr/src/app
+    networks:
+      - intranet-network
+  nginx:
+    container_name: nginx-proxy
+    image: nginx:latest
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./nginx/certs:/etc/nginx/certs:ro
+    networks:
+      - intranet-network
+
+networks:
+  intranet-network:
+    driver: bridge
