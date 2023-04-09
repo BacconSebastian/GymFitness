@@ -115,7 +115,8 @@ li {
 
 .first-button:focus,
 .first-button:hover {
-    background-color: $lightness;
+    background-color: $third-color;
+    border-color: $third-color;
 }
 
 .second-button {
