@@ -1,5 +1,29 @@
 version: "3.3"
 services:
+  expressapp:
+    container_name: api-intranet
+    build: ./api
+    expose:
+      - 3001
+    environment:
+      - DB_USER=postgres
+      - DB_PASSWORD=1324
+      - DB_DATABASE=Demo-Intranet
+      - DB_HOST=db
+    volumes:
+      - ./api:/usr/src/app
+    depends_on:
+      - db
+    networks:
+      - intranet-network
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=1324
+      - POSTGRES_DB=Demo-Intranet
+    networks:
+      - intranet-network
   reactapp:
     container_name: client-intranet
     build: ./client
@@ -14,12 +38,13 @@ services:
     ports:
       - "8080:80"
     links:
+      - expressapp
       - reactapp
       - nginx-proxy
       - letsencrypt
     environment:
-      - VIRTUAL_HOST=gymfitness.website,www.gymfitness.website
-      - LETSENCRYPT_HOST=gymfitness.website,www.gymfitness.website
+      - VIRTUAL_HOST=gymfitness.website
+      - LETSENCRYPT_HOST=gymfitness.website
     restart: always
     networks:
       - intranet-network
