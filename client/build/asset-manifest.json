@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.4046af13.css",
+    "main.js": "/static/js/main.6e83554f.js",
+    "static/media/comida-saludable.jpg": "/static/media/comida-saludable.04ee835613f767089f35.jpg",
+    "static/media/gym-logo.png": "/static/media/gym-logo.f23c26607e947c3c07db.png",
+    "static/media/home-wallpaper.jpg": "/static/media/home-wallpaper.6e288e2bb05493cea4e7.jpg",
+    "static/media/mujer-corriendo.jpg": "/static/media/mujer-corriendo.1ae4d467f8a60c69e865.jpg",
+    "static/media/fitness-online.jpg": "/static/media/fitness-online.41bd75de982e758477ef.jpg",
+    "static/media/cursor.png": "/static/media/cursor.7b41d51328445792aabb.png",
+    "static/media/corte-v.png": "/static/media/corte-v.6183b4b127e9523d11de.png",
+    "static/media/nav-mobile.svg": "/static/media/nav-mobile.9bb1a58f628b9798873a5d7f14f1696f.svg",
+    "index.html": "/index.html",
+    "static/media/close-menu.svg": "/static/media/close-menu.bb321b4eff872ecf8c862c43744ddee7.svg",
+    "main.4046af13.css.map": "/static/css/main.4046af13.css.map",
+    "main.6e83554f.js.map": "/static/js/main.6e83554f.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4046af13.css",
+    "static/js/main.6e83554f.js"
+  ]
+}
